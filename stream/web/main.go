@@ -10,6 +10,7 @@ import (
 	"github.com/gorilla/websocket"
 	proto "github.com/micro/examples/stream/server/proto"
 	"github.com/micro/go-micro/v2/client"
+	grpcclient "github.com/micro/go-micro/v2/client/grpc"
 	"github.com/micro/go-micro/v2/web"
 )
 
@@ -40,6 +41,7 @@ func Stream(cli proto.StreamerService, ws *websocket.Conn) error {
 	// Send request to stream server
 	stream, err := cli.ServerStream(context.Background(), &req)
 	if err != nil {
+		log.Printf("cli.ServerStream err: %v", err)
 		return err
 	}
 	defer stream.Close()
@@ -50,9 +52,10 @@ func Stream(cli proto.StreamerService, ws *websocket.Conn) error {
 		rsp, err := stream.Recv()
 		if err != nil {
 			if err != io.EOF {
+				log.Printf("stream.Recv err: %v", err)
 				return err
 			}
-
+			log.Println("stream.Recv EOF")
 			break
 		}
 
@@ -64,6 +67,7 @@ func Stream(cli proto.StreamerService, ws *websocket.Conn) error {
 				log.Println("Expected Close on socket", err)
 				break
 			} else {
+				log.Println("ws.WriteJSON err: ", err)
 				return err
 			}
 		}
@@ -92,7 +96,7 @@ func main() {
 	}
 
 	// New RPC client
-	rpcClient := client.NewClient(client.RequestTimeout(time.Second * 120))
+	rpcClient := grpcclient.NewClient(client.RequestTimeout(time.Second * 120))
 	cli := proto.NewStreamerService("go.micro.srv.stream", rpcClient)
 
 	// Serve static html/js
