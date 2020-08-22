@@ -4,7 +4,7 @@ keywords: users
 tags: [users]
 sidebar: home_sidebar
 permalink: /docs/users.html
-summary: 
+summary:
 ---
 
 If you're using Micro, feel free to add your company
@@ -15,12 +15,11 @@ If you're using Micro, feel free to add your company
 - [Agora.io](http://agora.io) -- Real-Time video, audio, and live interactive broadcasting Communication API solution
 - [Ankr](https://www.ankr.network/) - Distributed cloud computing network
 - [Arex](https://arex.io/) - Automated receivable exchange
-- [BetMakers](https://betmakers.com/) - Data aggregation of horse racing and sports information 
+- [BetMakers](https://betmakers.com/) - Data aggregation of horse racing and sports information
 - [Bottos](https://bottos.org/) - Decentralised AI network
 - [Capital One](https://www.capitalone.com/) - Financial services
 - [CESNET](https://www.cesnet.cz/) - Czech Educational and Research Network
 - [CodersRank](https://codersrank.io/) - Real time profiles for open source contributions
-- [Coesia](https://www.coesia.com/en) - Industrial and packaging solutions
 - [Dark Cubed](http://darkcubed.com) - Cyber security services
 - [Elumium](https://www.elumium.com/) - Tenant communications
 - [Glue](https://glue.group) - Digital development agency
@@ -53,7 +52,7 @@ If you're using Micro, feel free to add your company
 - [Stillwater Supercomputing](http://www.stillwater-sc.com/) - Knowledge processing system
 - [Tencent](https://www.tencent.com/en-us/)
 - [TodayTix](https://www.todaytix.com/) - Ticket reservation service
-- [Ulule](https://www.ulule.com/) - Crowdfunding platform 
+- [Ulule](https://www.ulule.com/) - Crowdfunding platform
 - [Unity Labs](https://www.unitylabs.io/) - Blockchain development company
 - [VCC Live](https://vcc.live/) - Cloud Contact Center Software
 - [Vimeo](https://vimeo.com/) - Video sharing platform
